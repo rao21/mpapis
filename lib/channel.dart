@@ -1,3 +1,6 @@
+import 'package:mpapis/controllers/dataBase.dart';
+import 'package:mpapis/controllers/favorite.dart';
+import 'package:mpapis/controllers/menu.dart';
 import 'package:mpapis/controllers/speaker.dart';
 
 import 'mpapis.dart';
@@ -34,6 +37,10 @@ class MpapisChannel extends ApplicationChannel {
     });
 
     router.route("/talksSpeaker").link(() => Speakers());
+
+    router.route("/menu").link(() => Menu());
+
+    router.route("/favourite").link(() => Favourite());
     return router;
   }
 }
